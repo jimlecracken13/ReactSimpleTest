@@ -1,6 +1,6 @@
 function CareScale({careType, scaleValue})
 {
-    const scaleType = careType == 'light' ? '☀️' : '💧'
+    const scaleType = careType === 'light' ? '☀️' : '💧'
     const range = [1,2,3];
     return (
         <div>
@@ -15,3 +15,4 @@ function CareScale({careType, scaleValue})
         </div>
     )
 }
+export default CareScale;
