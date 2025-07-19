@@ -11,6 +11,9 @@
 # production
 /build
 
+#test de gitignore
+/src/gitignoretest
+
 # misc
 .DS_Store
 .env.local
