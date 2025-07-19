@@ -1,6 +1,10 @@
+import water from '../assets/water.svg'
+import sun from '../assets/sun.svg'
 function CareScale({careType, scaleValue})
 {
-    const scaleType = careType === 'light' ? '☀️' : '💧'
+    let weather
+    const scaleType = careType === 'light' ? weather = sun : weather = water
+    
     const range = [1,2,3];
     return (
         <div>
@@ -8,7 +12,7 @@ function CareScale({careType, scaleValue})
                 range.map(
                     (rangeElement)=> scaleValue >= rangeElement &&
                     <span key={rangeElement.toString()}>
-                        {scaleType}
+                        <img src={weather} alt="logo" className="lmj-logo"/>
                     </span>
                 )
             }

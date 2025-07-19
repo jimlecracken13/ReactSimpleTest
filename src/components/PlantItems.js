@@ -1,10 +1,11 @@
 import CareScale from './CareScale'
-
+import cover from '../assets/monstera.jpg'
+import '../styles/PlantItems.css'
 const PlantItems = ({plant})=>{
     return(
         <li key={plant.id} className='lmj-plant-item'>
             {plant.name}
-            {plant.cover}
+            <img src={cover} alt="cover" className="lmj-plant-item-cover "/>
             {    
             plant.isSpecialOffer && (<div>
                     soldes
