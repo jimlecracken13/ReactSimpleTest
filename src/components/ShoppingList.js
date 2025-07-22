@@ -2,7 +2,7 @@ import plantlist from "../datas/plantList";
 import PlantItems from './PlantItems'
 import "../styles/ShoppingList.css";
 
-const ShoppingList = () => {
+const ShoppingList = ({cart, updateCart}) => {
   const listCategori = [
     ...new Set(plantlist.map((element) => element.category)),
   ];
@@ -17,7 +17,7 @@ const ShoppingList = () => {
       <ul className='lmj-plant-list'>
         {
             plantlist.map((plant)=>(
-              <PlantItems plant={plant}/>
+              <PlantItems plant={plant} cart={cart} updateCart={updateCart}/>
             ))
         }
       </ul>

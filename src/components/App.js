@@ -1,15 +1,17 @@
 import Banner from "./Banner";
 import Cart from "./Cart";
 import ShoppingList from "./ShoppingList"
-import React from "react";
+import Footer from "./Footer";
+import React, { useState } from "react";
 function App() {
+  const [cart, updateCart]= useState([])
   return (
-    <React.Fragment>
+    <>
       <Banner />
-      <ShoppingList/>
-      <Cart />
-    </React.Fragment>
-    
+      <ShoppingList cart={cart} updateCart={updateCart}/>
+      <Cart cart={cart} updateCart={updateCart}/>
+      <Footer></Footer>
+    </>
   );
 }
 
