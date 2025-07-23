@@ -3,6 +3,7 @@ import "../styles/Cart.css";
 const Cart = ({ cart, updateCart }) => {
   const [isOpen, setIsOpen] = useState(true);
   let total = cart.reduce((accu, plant) => accu + plant.amont * plant.price, 0);
+  console.log(`J'aurai ${total} a payé`)
   return isOpen ? (
     <div className="lmj-cart">
       <h2>Panier</h2>
