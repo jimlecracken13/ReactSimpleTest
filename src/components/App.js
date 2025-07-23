@@ -2,13 +2,16 @@ import Banner from "./Banner";
 import Cart from "./Cart";
 import ShoppingList from "./ShoppingList"
 import Footer from "./Footer";
-import React, { useState } from "react";
+import Categories from "./Categories";
+import { useState } from "react";
 function App() {
   const [cart, updateCart]= useState([])
+  const [categorie, setCategorie]=useState("classique")
   return (
     <>
       <Banner />
-      <ShoppingList cart={cart} updateCart={updateCart}/>
+      <Categories categorie={categorie} setCategorie={setCategorie}/>
+      <ShoppingList cart={cart} updateCart={updateCart} categorie={categorie}/>
       <Cart cart={cart} updateCart={updateCart}/>
       <Footer></Footer>
     </>

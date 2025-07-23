@@ -2,36 +2,13 @@ import water from '../assets/water.svg'
 import sun from '../assets/sun.svg'
 import "../styles/CareScale.css"
 function handleClick (careType, scaleValue){
-    
-    if(careType === "light")
-    {
-        if(scaleValue === 1)
-        {
-            alert(`necessite peu de lumière`)
-        }
-        if(scaleValue === 2)
-        {
-            alert(`necessite modérement de la lumière`)
-        }
-        if(scaleValue === 3)
-        {
-            alert(`necessite beaucoup de lumière`)
-        }
+
+    const intensite = {
+        1: "peu",
+        2: "modérement",
+        3: "beacoup"
     }
-    else{
-        if(scaleValue === 1)
-        {
-            alert(`necessite peu d'eau `)
-        }
-        if(scaleValue === 2)
-        {
-            alert(`necessite modérement de l'eau `)
-        }
-        if(scaleValue === 3)
-        {
-            alert(`necessite beaucoup d'eau`)
-        }
-    }
+    alert(`necessite ${intensite[scaleValue]} ${careType === "light"? "de lumière": " d'eau "}`)
 }
 function CareScale({careType, scaleValue})
 {
