@@ -6,12 +6,12 @@ import Categories from "./Categories";
 import { useState } from "react";
 function App() {
   const [cart, updateCart]= useState([])
-  const [categorie, setCategorie]=useState("classique")
+  const [category, setCategory]=useState("")
   return (
     <>
       <Banner />
-      <Categories categorie={categorie} setCategorie={setCategorie}/>
-      <ShoppingList cart={cart} updateCart={updateCart} categorie={categorie}/>
+      <Categories category={category} setCategory={setCategory}/>
+      <ShoppingList cart={cart} updateCart={updateCart} category={category}/>
       <Cart cart={cart} updateCart={updateCart}/>
       <Footer></Footer>
     </>

@@ -17,7 +17,7 @@ const addToCart = (cart, plant, updateCart) => {
     ]);
   }
 };
-const PlantItems = ({ plant, cart, updateCart}) => {
+const PlantItems = ({ plant, cart, updateCart, category}) => {
   return (
     <li key={plant.id} className="lmj-plant-item">
       <img src={plant.cover} alt="cover" className="lmj-plant-item-cover " />
@@ -30,7 +30,7 @@ const PlantItems = ({ plant, cart, updateCart}) => {
           Ajouter
         </button>
       </div>
-    </li>
-  );
+    </li> 
+  )
 };
 export default PlantItems;
