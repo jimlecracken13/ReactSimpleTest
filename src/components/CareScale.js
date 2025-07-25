@@ -1,6 +1,7 @@
 import water from '../assets/water.svg'
 import sun from '../assets/sun.svg'
 import "../styles/CareScale.css"
+
 function handleClick (careType, scaleValue){
 
     const intensite = {
@@ -10,6 +11,7 @@ function handleClick (careType, scaleValue){
     }
     alert(`necessite ${intensite[scaleValue]} ${careType === "light"? "de lumière": " d'eau "}`)
 }
+
 function CareScale({careType, scaleValue})
 {
     let weather
@@ -29,4 +31,5 @@ function CareScale({careType, scaleValue})
         </div>
     )
 }
+
 export default CareScale;

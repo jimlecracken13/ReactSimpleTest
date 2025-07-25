@@ -17,6 +17,7 @@ const addToCart = (cart, plant, updateCart) => {
     ]);
   }
 };
+
 const PlantItems = ({ plant, cart, updateCart, category}) => {
   return (
     <li key={plant.id} className="lmj-plant-item">
@@ -33,4 +34,5 @@ const PlantItems = ({ plant, cart, updateCart, category}) => {
     </li> 
   )
 };
+
 export default PlantItems;
